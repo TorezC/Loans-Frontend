@@ -1,0 +1,44 @@
+<h2>Customers</h2>
+<button>Add Customers</button>
+<form class="d-flex ">
+    <input class="form-control search" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+</form>
+<div>
+    <table class="table ">
+        <thead>
+          <tr>
+            <td scope = "row">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+              </div>
+            </td>
+            <th scope="col">Customer Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let customers of allCustomersList">
+            <td scope = "row">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+              </div>
+            </td>
+            <td><a [routerLink]= "['view', customers._id]">{{customers._id}}</a></td>
+            <td>{{customers.firstName}}</td>
+            <td>{{customers.lastName}}</td>
+            <td>{{customers.emailAddress}}</td>
+            <td>{{customers.phoneNumber}}</td>
+            <td>{{customers.dob}}</td>
+            <td>{{customers.department}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+</div>

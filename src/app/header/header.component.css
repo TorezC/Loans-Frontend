@@ -1,0 +1,12 @@
+.nav-fontt{
+    font-weight: bolder;    
+}
+.nav-a-link{
+    text-decoration: none;
+    color:white;
+    margin:5px;
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
